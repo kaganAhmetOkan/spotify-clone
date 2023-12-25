@@ -9,6 +9,12 @@
   --accent: #22ee6a;
   --icon: #a7a7a7;
 
+  --main-gap: 0.5rem;
+  --main-radius: 0.5rem;
+  --main-padding: 1rem;
+  --body-padding: 0.5rem;
+  --controller-height: 6rem;
+
   color-scheme: dark;
 }
 
@@ -25,6 +31,10 @@ body {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--main-gap);
+  padding: var(--body-padding);
   color: var(--fg);
   background-color: var(--bg);
 }
@@ -32,4 +42,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.rootRow {
+  display: flex;
+  gap: var(--main-gap);
+  height: calc(100svh - var(--controller-height));
 }

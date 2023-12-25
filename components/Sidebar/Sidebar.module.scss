@@ -1,0 +1,9 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--main-gap);
+  padding: var(--main-padding);
+  border-radius: var(--main-radius);
+  width: 20rem;
+  background-color: var(--bg-secondary);
+}
