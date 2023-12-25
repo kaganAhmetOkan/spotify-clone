@@ -1,7 +1,8 @@
+import Browser from "@/components/Browser/Browser";
+
 export default function Home() {
   return (
-    <main>
-    </main>
+    <Browser />
   );
 };
 
@@ -12,7 +13,7 @@ export default function Home() {
     - [x] Sidebar:
       - [ ] Nav
       - [ ] Library
-    - [ ] Browser:
+    - [x] Browser:
       - [ ] Hero
       - [ ] Header
       - [ ] Searchbar
