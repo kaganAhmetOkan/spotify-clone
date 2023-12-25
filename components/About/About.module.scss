@@ -1,9 +1,9 @@
 .main {
   display: flex;
   flex-direction: column;
-  border-radius: var(--main-radius);
-  padding: var(--main-padding);
-  gap: var(--main-gap);
+  border-radius: var(--primary-radius);
+  padding: var(--primary-padding);
+  gap: var(--primary-gap);
   background-color: var(--bg-secondary);
   width: var(--sidebar-width);
 }

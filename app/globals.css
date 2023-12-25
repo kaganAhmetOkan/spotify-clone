@@ -9,9 +9,9 @@
   --accent: #22ee6a;
   --icon: #a7a7a7;
 
-  --main-gap: 0.5rem;
-  --main-radius: 0.5rem;
-  --main-padding: 1rem;
+  --primary-gap: 0.5rem;
+  --primary-radius: 0.5rem;
+  --primary-padding: 1rem;
   --secondary-gap: 1rem;
 
   --sidebar-width: 18rem;
@@ -37,7 +37,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  gap: var(--main-gap);
+  gap: var(--primary-gap);
   padding: var(--body-padding);
   color: var(--fg);
   background-color: var(--bg);
@@ -51,5 +51,5 @@ a {
 .rootRow {
   display: flex;
   flex-grow: 1;
-  gap: var(--main-gap);
+  gap: var(--primary-gap);
 }
