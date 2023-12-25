@@ -1,9 +1,11 @@
 :root {
   --fg: #ffffff;
+  --fg-secondary: #dadada;
   --bg: #000000;
+  --bg-secondary: #191414;
 
   --primary: #1db954;
-  --secondary: #191414;
+  --secondary: #302C2C;
   --accent: #22ee6a;
 
   color-scheme: dark;
