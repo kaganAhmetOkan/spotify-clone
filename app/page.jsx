@@ -17,7 +17,7 @@ export default function Home() {
       - [ ] Header
       - [ ] Searchbar
       - [ ] Sections
-    - [ ] About:
+    - [x] About:
       - [ ] Thumbnail
       - [ ] Artist
       - [ ] Next

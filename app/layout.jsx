@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Sidebar from "@/components/Sidebar/Sidebar";
 import Controller from "@/components/Controller/Controller";
+import About from "@/components/About/About";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <div className="rootRow">
           <Sidebar />
           {children}
+          <About />
         </div>
         <Controller />
       </body>
