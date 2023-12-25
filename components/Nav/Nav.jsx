@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 export default function Nav() {
   const path = usePathname();
-  const atHome = path === "/";
+  const atHome = path === "/home";
   const atSearch = path === "/search";
 
   const homeIcon = atHome ? "/icons/home_filled.png" : "/icons/home.png";
@@ -16,7 +16,7 @@ export default function Nav() {
   
   return (
     <nav className={style.main}>
-      <Link href={`/`} className={style.link} data-active={atHome}>
+      <Link href={`/home`} className={style.link} data-active={atHome}>
         <Image src={homeIcon} alt="home" width={iconSize} height={iconSize} />
         <span>Home</span>
       </Link>
