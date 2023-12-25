@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--secondary-gap);
+  padding: var(--main-padding);
+  border-radius: var(--main-radius);
+  background-color: var(--bg-secondary);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+  transform: filter 250ms;
+}
+
+.link[data-active],
+.link:hover {
+  filter: brightness(1.5);
+}

@@ -21,7 +21,7 @@ export default function Home() {
   - [x] Import necessary icons and logos
   - [ ] Develop components:
     - [x] Sidebar:
-      - [ ] Nav
+      - [x] Nav
       - [ ] Library
     - [x] Browser:
       - [ ] Hero
