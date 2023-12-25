@@ -5,3 +5,25 @@ export default function Home() {
     </main>
   );
 };
+
+/*
+  TODOS:
+  - [ ] Import necessary icons and logos
+  - [ ] Develop components:
+    - [ ] Sidebar:
+      - [ ] Nav
+      - [ ] Library
+    - [ ] Browser:
+      - [ ] Hero
+      - [ ] Header
+      - [ ] Searchbar
+      - [ ] Sections
+    - [ ] About:
+      - [ ] Thumbnail
+      - [ ] Artist
+      - [ ] Next
+    - [ ] Controller:
+      - [ ] CurrentSong
+      - [ ] Controls
+      - [ ] Options
+*/
