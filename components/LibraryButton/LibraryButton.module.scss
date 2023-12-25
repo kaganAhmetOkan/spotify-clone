@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  align-items: center;
+  gap: var(--secondary-gap);
+  font-weight: bold;
+  cursor: pointer;
+  transition: filter 250ms;
+
+  /* clear defaults */
+  font-size: unset;
+  background-color: unset;
+  border: unset;
+  outline: unset;
+}
+
+.main[data-active="true"],
+.main:hover {
+  filter: brightness(1.5);
+}
