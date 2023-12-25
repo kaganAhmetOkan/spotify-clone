@@ -21,7 +21,7 @@ export default function Home() {
       - [ ] Thumbnail
       - [ ] Artist
       - [ ] Next
-    - [ ] Controller:
+    - [x] Controller:
       - [ ] CurrentSong
       - [ ] Controls
       - [ ] Options

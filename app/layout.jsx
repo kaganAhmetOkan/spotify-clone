@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Sidebar from "@/components/Sidebar/Sidebar";
+import Controller from "@/components/Controller/Controller";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
           <Sidebar />
           {children}
         </div>
+        <Controller />
       </body>
     </html>
   );

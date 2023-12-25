@@ -46,6 +46,6 @@ a {
 
 .rootRow {
   display: flex;
+  flex-grow: 1;
   gap: var(--main-gap);
-  height: calc(100svh - var(--controller-height));
 }
