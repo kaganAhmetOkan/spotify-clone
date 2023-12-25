@@ -1,19 +1,43 @@
 .main {
   display: flex;
-  align-items: center;
-  gap: var(--secondary-gap);
-  font-weight: bold;
-  cursor: pointer;
-  transition: filter 250ms;
+}
 
+.main > button {
   /* clear defaults */
   font-size: unset;
   background-color: unset;
   border: unset;
   outline: unset;
+  cursor: pointer;
 }
 
-.main[data-active="true"],
-.main:hover {
+.title {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  gap: var(--secondary-gap);
+  font-weight: bold;
+  transition: filter 250ms;
+}
+
+.title[data-active="true"],
+.title:hover {
   filter: brightness(1.5);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transition: background-color 250ms;
+}
+
+.button:hover {
+  background-color: var(--secondary);
+}
+
+.button:active {
+  background-color: var(--bg);
 }
