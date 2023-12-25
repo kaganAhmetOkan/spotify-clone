@@ -1,21 +1,29 @@
 .main {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
-  gap: var(--secondary-gap);
   padding: var(--primary-padding);
+  gap: var(--secondary-gap);
   border-radius: var(--primary-radius);
   background-color: var(--bg-secondary);
 }
 
-.link {
+.button {
   display: flex;
   align-items: center;
   gap: var(--secondary-gap);
   font-weight: bold;
+  cursor: pointer;
   transition: filter 250ms;
+
+  /* clear defaults */
+  font-size: unset;
+  background-color: unset;
+  border: unset;
+  outline: unset;
 }
 
-.link[data-active="true"],
-.link:hover {
+.button[data-active="true"],
+.button:hover {
   filter: brightness(1.5);
 }

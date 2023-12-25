@@ -22,7 +22,7 @@ export default function Home() {
   - [ ] Develop components:
     - [x] Sidebar:
       - [x] Nav
-      - [ ] Library
+      - [x] Library
     - [x] Browser:
       - [ ] Hero
       - [ ] Header

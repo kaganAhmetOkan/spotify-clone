@@ -1,18 +1,17 @@
 "use client";
 import style from "./Nav.module.scss";
+import PropTypes from "prop-types";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-export default function Nav() {
+export default function Nav({ iconSize }) {
   const path = usePathname();
   const atHome = path === "/home";
   const atSearch = path === "/search";
 
   const homeIcon = atHome ? "/icons/home_filled.png" : "/icons/home.png";
   const searchIcon = atSearch ? "/icons/search_filled.png" : "/icons/search.png";
-
-  const iconSize = 28;
   
   return (
     <nav className={style.main}>
@@ -26,4 +25,8 @@ export default function Nav() {
       </Link>
     </nav>
   );
+};
+
+Nav.propTypes = {
+  iconSize: PropTypes.number.isRequired,
 };
