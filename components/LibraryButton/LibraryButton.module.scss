@@ -42,3 +42,10 @@
 .button:active {
   background-color: var(--bg);
 }
+
+.main[data-minimized=true] {
+  span,
+  .button {
+    display: none;
+  }
+}

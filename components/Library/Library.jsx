@@ -1,13 +1,8 @@
-"use client";
 import style from "./Library.module.scss";
 import PropTypes from "prop-types";
-import { useState } from "react";
 import LibraryButton from "../LibraryButton/LibraryButton";
 
-export default function Library({ iconSize }) {
-  const [minimized, setMinimized] = useState(false);
-  const [enlarged, setEnlarged] = useState(false);
-
+export default function Library({ iconSize, minimized, setMinimized, enlarged, setEnlarged }) {
   return (
     <div className={style.main}>
       <LibraryButton
@@ -23,4 +18,8 @@ export default function Library({ iconSize }) {
 
 Library.propTypes = {
   iconSize: PropTypes.number.isRequired,
+  minimized: PropTypes.bool.isRequired,
+  setMinimized: PropTypes.func.isRequired,
+  enlarged: PropTypes.bool.isRequired,
+  setEnlarged: PropTypes.func.isRequired,
 };

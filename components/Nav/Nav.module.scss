@@ -5,6 +5,7 @@
   padding: var(--primary-padding);
   border-radius: var(--primary-radius);
   background-color: var(--bg-secondary);
+  overflow: hidden;
 }
 
 .link {
@@ -18,4 +19,10 @@
 .link[data-active="true"],
 .link:hover {
   filter: brightness(1.5);
+}
+
+.main[data-minimized=true] {
+  span {
+    display: none;
+  }
 }

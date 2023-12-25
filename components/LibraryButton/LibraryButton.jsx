@@ -18,7 +18,7 @@ export default function LibraryButton({ iconSize, minimized, setMinimized, enlar
   };
 
   return (
-    <div className={style.main}>
+    <div className={style.main} data-minimized={minimized}>
       <button className={style.title} title={buttonTitle} onClick={toggleMinimized}>
           <Image src={libraryIcon} alt="library" width={iconSize} height={iconSize} />
           <span>Library</span>

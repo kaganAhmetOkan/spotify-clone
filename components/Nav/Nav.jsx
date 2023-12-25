@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-export default function Nav({ iconSize }) {
+export default function Nav({ iconSize, minimized }) {
   const path = usePathname();
   const atHome = path === "/home";
   const atSearch = path === "/search";
@@ -14,7 +14,7 @@ export default function Nav({ iconSize }) {
   const searchIcon = atSearch ? "/icons/search_filled.png" : "/icons/search.png";
   
   return (
-    <nav className={style.main}>
+    <nav className={style.main} data-minimized={minimized}>
       <Link href={`/home`} className={style.link} data-active={atHome}>
         <Image src={homeIcon} alt="home" width={iconSize} height={iconSize} />
         <span>Home</span>
@@ -29,4 +29,5 @@ export default function Nav({ iconSize }) {
 
 Nav.propTypes = {
   iconSize: PropTypes.number.isRequired,
+  minimized: PropTypes.bool,
 };

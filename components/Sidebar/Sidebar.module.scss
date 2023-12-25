@@ -3,4 +3,13 @@
   flex-direction: column;
   gap: var(--primary-gap);
   width: var(--sidebar-width);
+  transition: width 500ms;
+}
+
+.main[data-enlarged=true] {
+  width: 45svw;
+}
+
+.main[data-minimized=true] {
+  width: calc(28px + var(--primary-padding) * 2);
 }
