@@ -6,10 +6,17 @@ import LibraryButton from "../LibraryButton/LibraryButton";
 
 export default function Library({ iconSize }) {
   const [minimized, setMinimized] = useState(false);
+  const [enlarged, setEnlarged] = useState(false);
 
   return (
     <div className={style.main}>
-      <LibraryButton iconSize={iconSize} minimized={minimized} setMinimized={setMinimized} />
+      <LibraryButton
+        iconSize={iconSize}
+        minimized={minimized}
+        setMinimized={setMinimized}
+        enlarged={enlarged}
+        setEnlarged={setEnlarged}
+      />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 .main {
   display: flex;
+  gap: var(--primary-gap);
 }
 
 .main > button {
