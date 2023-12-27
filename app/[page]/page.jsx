@@ -1,19 +1,7 @@
 import Browser from "@/components/Browser/Browser";
-import Sidebar from "@/components/Sidebar/Sidebar";
-import Controller from "@/components/Controller/Controller";
-import About from "@/components/About/About";
 
 export default function Home() {
-  return (
-    <>
-      <div className="rootRow">
-        <Sidebar />
-        <Browser />
-        <About />
-      </div>
-      <Controller />
-    </>
-  );
+  return <Browser />
 };
 
 /*
