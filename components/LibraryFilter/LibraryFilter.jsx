@@ -3,7 +3,7 @@ import style from "./LibraryFilter.module.scss";
 import PropTypes from "prop-types";
 import Image from "next/image";
 import { useState, useRef } from "react";
-import useBindDropdown from "@/hooks/useBindDropdown";
+import useBind from "@/hooks/useBind";
 
 export default function LibraryFilter({ smallIconSize }) {
   const [dropdown, setDropdown] = useState(false);
@@ -15,10 +15,8 @@ export default function LibraryFilter({ smallIconSize }) {
   const viewAs = ["compact", "list", "grid"];
   const typeAs = ["playlist", "podcast & shows", "albums", "artists"];
 
-  const parentRef = useRef(null);
-  const dropdownRef = useRef(null);
-
-  useBindDropdown(parentRef, dropdownRef);
+  const buttonRef = useRef(null);
+  const bindStyle = useBind(buttonRef);
 
   function toggleDropdown() {
     setDropdown(!dropdown);
@@ -30,12 +28,12 @@ export default function LibraryFilter({ smallIconSize }) {
   };
   
   return (
-    <div className={style.main} ref={parentRef}>
-      <button className={style.mainButton} onClick={toggleDropdown}>
+    <div className={style.main}>
+      <button className={style.mainButton} onClick={toggleDropdown} ref={buttonRef}>
         <span>{sort}</span>
         <Image src={`/icons/${view}.png`} alt="view mode" width={smallIconSize} height={smallIconSize} />
       </button>
-      <div className={style.dropdown} data-active={dropdown} ref={dropdownRef}>
+      <div className={style.dropdown} data-active={dropdown} style={bindStyle}>
         <ul>
           <li>Sort by</li>
           {sortBy.map(item => 
