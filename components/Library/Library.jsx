@@ -2,6 +2,7 @@ import style from "./Library.module.scss";
 import PropTypes from "prop-types";
 import LibraryButton from "../LibraryButton/LibraryButton";
 import LibrarySearch from "../LibrarySearch/LibrarySearch";
+import LibraryFilter from "../LibraryFilter/LibraryFilter";
 
 export default function Library({ iconSize, minimized, setMinimized, enlarged, setEnlarged }) {
   const smallIconSize = 16;
@@ -20,6 +21,9 @@ export default function Library({ iconSize, minimized, setMinimized, enlarged, s
         smallIconSize={smallIconSize}
         minimized={minimized}
         setMinimized={setMinimized}
+      />
+      <LibraryFilter
+        smallIconSize={smallIconSize}
       />
     </div>
   );

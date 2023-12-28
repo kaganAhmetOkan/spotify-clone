@@ -1,0 +1,92 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.mainButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--primary-gap);
+  padding: var(--primary-gap);
+  border-radius: var(--secondary-radius);
+  border: unset;
+  outline: unset;
+  background-color: unset;
+  cursor: pointer;
+  transition: filter 250ms, transform 100ms, background-color 250ms;
+}
+
+.mainButton:hover {
+  filter: brightness(1.5);
+  background-color: var(--secondary);
+}
+
+.mainButton:active {
+  transform: scale(0.95);
+}
+
+.mainButton > span {
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+
+.dropdown {
+  display: flex;
+  gap: var(--primary-gap);
+  padding: var(--secondary-padding);
+  border-radius: var(--secondary-radius);
+  background-color: var(--secondary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.dropdown > ul {
+  list-style-type: none;
+}
+
+.dropdown > ul > li:first-child {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: var(--secondary-padding);
+  filter: brightness(0.5);
+  user-select: none;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--primary-gap);
+  padding: var(--primary-gap);
+  border-radius: var(--secondary-radius);
+  text-transform: capitalize;
+  font-weight: bold;
+  width: 100%;
+  border: unset;
+  outline: unset;
+  background-color: unset;
+  cursor: pointer;
+  transition: filter 250ms, transform 100ms, background-color 250ms, color 250ms;
+}
+
+.button[data-selected=true] {
+  color: var(--primary);
+}
+
+.button:hover {
+  filter: brightness(1.5);
+  background-color: var(--secondary);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.dropdown[data-active=false] {
+  display: none;
+}
