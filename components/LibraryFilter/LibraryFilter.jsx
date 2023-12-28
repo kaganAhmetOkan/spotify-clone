@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState, useRef } from "react";
 import useBind from "@/hooks/useBind";
 
-export default function LibraryFilter({ smallIconSize }) {
+export default function LibraryFilter({ smallIconSize, minimized }) {
   const [dropdown, setDropdown] = useState(false);
   const [sort, setSort] = useState("recents");
   const [view, setView] = useState("list");
@@ -28,7 +28,7 @@ export default function LibraryFilter({ smallIconSize }) {
   };
   
   return (
-    <div className={style.main}>
+    <div className={style.main} data-minimized={minimized}>
       <button className={style.mainButton} onClick={toggleDropdown} ref={buttonRef}>
         <span>{sort}</span>
         <Image src={`/icons/${view}.png`} alt="view mode" width={smallIconSize} height={smallIconSize} />
@@ -72,4 +72,5 @@ export default function LibraryFilter({ smallIconSize }) {
 
 LibraryFilter.propTypes = {
   smallIconSize: PropTypes.number.isRequired,
+  minimized: PropTypes.bool.isRequired,
 };

@@ -24,6 +24,7 @@ export default function Library({ iconSize, minimized, setMinimized, enlarged, s
       />
       <LibraryFilter
         smallIconSize={smallIconSize}
+        minimized={minimized}
       />
     </div>
   );

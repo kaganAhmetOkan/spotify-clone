@@ -87,3 +87,7 @@
 .dropdown[data-active=false] {
   display: none;
 }
+
+.main[data-minimized=true] {
+  display: none;
+}
