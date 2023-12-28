@@ -2,6 +2,9 @@
 import style from "./LibraryFilter.module.scss";
 import PropTypes from "prop-types";
 import Image from "next/image";
+import SortList from "../LibraryFilterLists/SortList";
+import ViewList from "../LibraryFilterLists/ViewList";
+import TypeList from "../LibraryFilterLists/TypeList";
 import { useState, useRef } from "react";
 import useBind from "@/hooks/useBind";
 
@@ -22,11 +25,6 @@ export default function LibraryFilter({ smallIconSize, minimized }) {
     setDropdown(!dropdown);
   };
 
-  function updateType(item) {
-    if (type !== item) setType(item)
-    else setType("");
-  };
-  
   return (
     <div className={style.main} data-minimized={minimized}>
       <button className={style.mainButton} onClick={toggleDropdown} ref={buttonRef}>
@@ -34,37 +32,22 @@ export default function LibraryFilter({ smallIconSize, minimized }) {
         <Image src={`/icons/${view}.png`} alt="view mode" width={smallIconSize} height={smallIconSize} />
       </button>
       <div className={style.dropdown} data-active={dropdown} style={bindStyle}>
-        <ul>
-          <li>Sort by</li>
-          {sortBy.map(item => 
-            <li key={item}>
-              <button className={style.button} onClick={() => setSort(item)} data-selected={sort === item}>
-                {item}
-              </button>
-            </li>
-          )}
-        </ul>
-        <ul>
-          <li>View as</li>
-          {viewAs.map(item => 
-            <li key={item}>
-              <button className={style.button} onClick={() => setView(item)} data-selected={view === item}>
-                <Image src={`/icons/${item}.png`} alt={item} width={smallIconSize} height={smallIconSize} />
-                <span>{item}</span>
-              </button>
-            </li>
-          )}
-        </ul>
-        <ul>
-          <li>Type as</li>
-          {typeAs.map(item => 
-            <li key={item}>
-              <button className={style.button} onClick={() => updateType(item)} data-selected={type === item}>
-                {item}
-              </button>
-            </li>
-          )}
-        </ul>
+        <SortList
+          list={sortBy}
+          sort={sort}
+          setSort={setSort}
+        />
+        <ViewList
+          list={viewAs}
+          view={view}
+          setView={setView}
+          smallIconSize={smallIconSize}
+        />
+        <TypeList
+          list={typeAs}
+          type={type}
+          setType={setType}
+        />
       </div>
     </div>
   );

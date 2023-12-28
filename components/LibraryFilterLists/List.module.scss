@@ -1,0 +1,41 @@
+.main {
+  list-style-type: none;
+}
+
+.main > li:first-child {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: var(--secondary-padding);
+  filter: brightness(0.5);
+  user-select: none;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--primary-gap);
+  padding: var(--primary-gap);
+  border-radius: var(--secondary-radius);
+  text-transform: capitalize;
+  font-weight: bold;
+  width: 100%;
+  border: unset;
+  outline: unset;
+  background-color: unset;
+  cursor: pointer;
+  transition: filter 250ms, transform 100ms, background-color 250ms, color 250ms;
+}
+
+.button[data-selected=true] {
+  color: var(--primary);
+}
+
+.button:hover {
+  filter: brightness(1.5);
+  background-color: var(--secondary);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
