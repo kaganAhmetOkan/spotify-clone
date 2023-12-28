@@ -1,0 +1,41 @@
+.main {
+  display: flex;
+  gap: var(--primary-gap);
+  background-color: var(--secondary);
+  border-radius: var(--secondary-radius);
+  transition: background-color 250ms;
+}
+
+.main > button,
+.main > input {
+  display: flex;
+  align-items: center;
+  background-color: unset;
+  border: unset;
+  outline: unset;
+}
+
+.main > button {
+  cursor: pointer;
+  padding: var(--secondary-padding);
+  border-radius: 50%;
+  transition: background-color 250ms;
+}
+
+.main > button:hover {
+  background-color: var(--secondary);
+}
+
+.main > input {
+  max-width: 50svw;
+  width: 100%;
+  transition: max-width 250ms;
+}
+
+.main[data-show-search=false] {
+  background-color: transparent;
+}
+
+.main[data-show-search=false] > input {
+  max-width: 0;
+}

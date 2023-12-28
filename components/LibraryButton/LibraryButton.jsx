@@ -2,12 +2,11 @@ import style from "./LibraryButton.module.scss";
 import PropTypes from "prop-types";
 import Image from "next/image";
 
-export default function LibraryButton({ iconSize, minimized, setMinimized, enlarged, setEnlarged }) {
+export default function LibraryButton({ iconSize, smallIconSize, minimized, setMinimized, enlarged, setEnlarged }) {
   const libraryIcon = minimized ? "/icons/library.png" : "/icons/library_filled.png";
   const buttonTitle = minimized ? "Expand Your Library" : "Collapse Your Library";
   const enlargeIcon = enlarged ? "/icons/arrow_left.png" : "/icons/arrow_right.png";
   const enlargeTitle = enlarged ? "Show less" : "Show more";
-  const smallIconSize = 16;
 
   function toggleMinimized() {
     setMinimized(!minimized);
@@ -35,6 +34,7 @@ export default function LibraryButton({ iconSize, minimized, setMinimized, enlar
 
 LibraryButton.propTypes = {
   iconSize: PropTypes.number.isRequired,
+  smallIconSize: PropTypes.number.isRequired,
   minimized: PropTypes.bool.isRequired,
   setMinimized: PropTypes.func.isRequired,
   enlarged: PropTypes.bool.isRequired,

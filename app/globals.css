@@ -12,11 +12,15 @@
   --primary-gap: 0.5rem;
   --primary-radius: 0.5rem;
   --primary-padding: 1rem;
+  
   --secondary-gap: 1rem;
+  --secondary-padding: 0.4rem;
+  --secondary-radius: 0.2rem;
 
   --sidebar-width: 18rem;
   
   --body-padding: 0.5rem;
+  
   --controller-height: 6rem;
 
   color-scheme: dark;

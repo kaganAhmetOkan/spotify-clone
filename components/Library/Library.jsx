@@ -1,8 +1,11 @@
 import style from "./Library.module.scss";
 import PropTypes from "prop-types";
 import LibraryButton from "../LibraryButton/LibraryButton";
+import LibrarySearch from "../LibrarySearch/LibrarySearch";
 
 export default function Library({ iconSize, minimized, setMinimized, enlarged, setEnlarged }) {
+  const smallIconSize = 16;
+  
   return (
     <div className={style.main}>
       <LibraryButton
@@ -11,6 +14,12 @@ export default function Library({ iconSize, minimized, setMinimized, enlarged, s
         setMinimized={setMinimized}
         enlarged={enlarged}
         setEnlarged={setEnlarged}
+        smallIconSize={smallIconSize}
+      />
+      <LibrarySearch
+        smallIconSize={smallIconSize}
+        minimized={minimized}
+        setMinimized={setMinimized}
       />
     </div>
   );
