@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 
-export default function useBind(target) {
-  const [style, setStyle] = useState({ top: 0, left: 0 });
+export default function useBind(target: { current: null | HTMLElement}) {
+  const [style, setStyle] = useState({ top: "0px", left: "0px" });
 
   useEffect(() => {
+    if (target.current === null) return;
+
     const top = target.current.offsetTop;
     const left = target.current.offsetLeft;
     const height = target.current.clientHeight;

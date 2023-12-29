@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Sidebar from "@/components/Sidebar/Sidebar";
@@ -16,7 +15,11 @@ export const metadata = {
   description: 'A Spotify Clone',
 };
 
-export default function RootLayout({ children }) {
+interface RootParams {
+  readonly children: React.ReactNode;
+};
+
+export default function RootLayout({ children }: RootParams) {
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -30,7 +33,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 };
-
-RootLayout.propTypes = {
-  children: PropTypes.object,
-}

@@ -1,11 +1,15 @@
 "use client";
 import style from "./Nav.module.scss";
-import PropTypes from "prop-types";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-export default function Nav({ iconSize, minimized }) {
+interface Params {
+  readonly iconSize: number;
+  readonly minimized: boolean;
+};
+
+export default function Nav({ iconSize, minimized }: Params) {
   const path = usePathname();
   const atHome = path === "/home";
   const atSearch = path === "/search";
@@ -25,9 +29,4 @@ export default function Nav({ iconSize, minimized }) {
       </Link>
     </nav>
   );
-};
-
-Nav.propTypes = {
-  iconSize: PropTypes.number.isRequired,
-  minimized: PropTypes.bool,
 };

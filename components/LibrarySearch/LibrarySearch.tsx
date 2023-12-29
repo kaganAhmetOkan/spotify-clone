@@ -1,10 +1,15 @@
 "use client";
 import style from "./LibrarySearch.module.scss";
-import PropTypes from "prop-types";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function LibrarySearch({ smallIconSize, minimized, setMinimized }) {
+interface Params {
+  readonly smallIconSize: number;
+  readonly minimized: boolean;
+  readonly setMinimized: (value: boolean) => void;
+};
+
+export default function LibrarySearch({ smallIconSize, minimized, setMinimized }: Params) {
   const [showSearch, setShowSearch] = useState(false);
   
   function toggleShowSearch() {
@@ -19,7 +24,12 @@ export default function LibrarySearch({ smallIconSize, minimized, setMinimized }
   return (
     <search className={style.main} data-show-search={showSearch && !minimized}>
       <button onClick={toggleShowSearch}>
-        <Image src="/icons/search.png" alt="library search" width={smallIconSize} height={smallIconSize} />
+        <Image
+          src="/icons/search.png"
+          alt="library search"
+          width={smallIconSize}
+          height={smallIconSize}
+        />
       </button>
       <input
         type="text"
@@ -28,10 +38,4 @@ export default function LibrarySearch({ smallIconSize, minimized, setMinimized }
       ></input>
     </search>
   );
-};
-
-LibrarySearch.propTypes = {
-  smallIconSize: PropTypes.number.isRequired,
-  minimized: PropTypes.bool.isRequired,
-  setMinimized: PropTypes.func.isRequired,
 };

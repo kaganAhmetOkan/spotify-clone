@@ -1,9 +1,14 @@
 import style from "./List.module.scss";
-import PropTypes from "prop-types";
 
-export default function TypeList({ list, type, setType }) {
+interface Params {
+  readonly list: string[];
+  readonly type: string;
+  readonly setType: (value: string) => void;
+};
+
+export default function TypeList({ list, type, setType }: Params) {
   
-  function updateType(item) {
+  function updateType(item: string) {
     if (type !== item) setType(item)
     else setType("");
   };
@@ -22,10 +27,4 @@ export default function TypeList({ list, type, setType }) {
       )}
     </ul>
   );
-};
-
-TypeList.propTypes = {
-  list: PropTypes.array.isRequired,
-  type: PropTypes.string.isRequired,
-  setType: PropTypes.func.isRequired,
 };

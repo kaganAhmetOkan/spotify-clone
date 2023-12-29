@@ -1,10 +1,17 @@
 import style from "./Library.module.scss";
-import PropTypes from "prop-types";
 import LibraryButton from "../LibraryButton/LibraryButton";
 import LibrarySearch from "../LibrarySearch/LibrarySearch";
 import LibraryFilter from "../LibraryFilter/LibraryFilter";
 
-export default function Library({ iconSize, minimized, setMinimized, enlarged, setEnlarged }) {
+interface Params {
+  readonly iconSize: number;
+  readonly minimized: boolean;
+  readonly setMinimized: (value: boolean) => void;
+  readonly enlarged: boolean;
+  readonly setEnlarged: (value: boolean) => void;
+};
+
+export default function Library({ iconSize, minimized, setMinimized, enlarged, setEnlarged }: Params) {
   const smallIconSize = 16;
   
   return (
@@ -28,12 +35,4 @@ export default function Library({ iconSize, minimized, setMinimized, enlarged, s
       />
     </div>
   );
-};
-
-Library.propTypes = {
-  iconSize: PropTypes.number.isRequired,
-  minimized: PropTypes.bool.isRequired,
-  setMinimized: PropTypes.func.isRequired,
-  enlarged: PropTypes.bool.isRequired,
-  setEnlarged: PropTypes.func.isRequired,
 };

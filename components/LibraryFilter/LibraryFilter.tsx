@@ -1,6 +1,5 @@
 "use client";
 import style from "./LibraryFilter.module.scss";
-import PropTypes from "prop-types";
 import Image from "next/image";
 import SortList from "../LibraryFilterLists/SortList";
 import ViewList from "../LibraryFilterLists/ViewList";
@@ -8,7 +7,12 @@ import TypeList from "../LibraryFilterLists/TypeList";
 import { useState, useRef } from "react";
 import useBind from "@/hooks/useBind";
 
-export default function LibraryFilter({ smallIconSize, minimized }) {
+interface Params {
+  readonly smallIconSize: number;
+  readonly minimized: boolean;
+};
+
+export default function LibraryFilter({ smallIconSize, minimized }: Params) {
   const [dropdown, setDropdown] = useState(false);
   const [sort, setSort] = useState("recents");
   const [view, setView] = useState("list");
@@ -51,9 +55,4 @@ export default function LibraryFilter({ smallIconSize, minimized }) {
       </div>
     </div>
   );
-};
-
-LibraryFilter.propTypes = {
-  smallIconSize: PropTypes.number.isRequired,
-  minimized: PropTypes.bool.isRequired,
 };

@@ -1,7 +1,12 @@
 import style from "./List.module.scss";
-import PropTypes from "prop-types";
 
-export default function SortList({ list, sort, setSort }) {
+interface Params {
+  readonly list: string[];
+  readonly sort: string;
+  readonly setSort: (value: string) => void;
+};
+
+export default function SortList({ list, sort, setSort }: Params) {
   return (
     <ul className={style.main}>
       <li>Sort by</li>
@@ -16,10 +21,4 @@ export default function SortList({ list, sort, setSort }) {
       )}
     </ul>
   );
-};
-
-SortList.propTypes = {
-  list: PropTypes.array.isRequired,
-  sort: PropTypes.string.isRequired,
-  setSort: PropTypes.func.isRequired,
 };
