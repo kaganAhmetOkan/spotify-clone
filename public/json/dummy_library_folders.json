@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Liked Songs",
+    "thumbnail": "/images/placeholder.png",
+    "type": "playlist",
+    "creator": "you",
+    "songs": 722,
+    "dateAdded": "25 seconds ago",
+    "lastPlayed": "3 hours ago"
+  },
+  {
+    "title": "Your Episodes",
+    "thumbnail": "/images/placeholder.png",
+    "type": "Saved & downloaded episodes",
+    "creator": "you",
+    "songs": 0,
+    "dateAdded": "Nov 6, 2022",
+    "lastPlayed": "4 days ago"
+  },
+  {
+    "title": "chill lofi study beats",
+    "thumbnail": "/images/placeholder.png",
+    "type": "playlist",
+    "creator": "Spotify",
+    "songs": 241,
+    "dateAdded": "2 weeks ago",
+    "lastPlayed": "8 hours ago"
+  },
+  {
+    "title": "Vicious Delicious",
+    "thumbnail": "/images/placeholder.png",
+    "type": "album",
+    "creator": "Infected Mushroom",
+    "songs": 21,
+    "dateAdded": "3 days ago",
+    "lastPlayed": "2 days ago"
+  },
+  {
+    "title": "Summer Vibes",
+    "thumbnail": "/images/placeholder.png",
+    "type": "playlist",
+    "creator": "user123",
+    "songs": 50,
+    "dateAdded": "2 weeks ago",
+    "lastPlayed": "1 day ago"
+  },
+  {
+    "title": "Best of 2023",
+    "thumbnail": "/images/placeholder.png",
+    "type": "playlist",
+    "creator": "musiclover456",
+    "songs": 75,
+    "dateAdded": "3 days ago",
+    "lastPlayed": "6 hours ago"
+  },
+  {
+    "title": "Rock Classics",
+    "thumbnail": "/images/placeholder.png",
+    "type": "playlist",
+    "creator": "rockfan789",
+    "songs": 100,
+    "dateAdded": "1 month ago",
+    "lastPlayed": "2 weeks ago"
+  },
+  {
+    "title": "Chill Beats",
+    "thumbnail": "/images/placeholder.png",
+    "type": "album",
+    "creator": "ambientartist",
+    "songs": 15,
+    "dateAdded": "5 days ago",
+    "lastPlayed": "3 days ago"
+  }
+]
