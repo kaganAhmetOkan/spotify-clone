@@ -20,11 +20,15 @@ export default function Nav({ iconSize, minimized }: Params) {
   return (
     <nav className={style.main} data-minimized={minimized}>
       <Link href={`/home`} className={style.link} data-active={atHome}>
-        <Image src={homeIcon} alt="home" width={iconSize} height={iconSize} />
+        <div className={style.icon}>
+          <Image src={homeIcon} alt="home" width={iconSize} height={iconSize} />
+        </div>
         <span>Home</span>
       </Link>
       <Link href={"/search"} className={style.link} data-active={atSearch}>
-        <Image src={searchIcon} alt="search" width={iconSize} height={iconSize} />
+        <div className={style.icon}>
+          <Image src={searchIcon} alt="search" width={iconSize} height={iconSize} />
+        </div>
         <span>Search</span>
       </Link>
     </nav>

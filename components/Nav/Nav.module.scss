@@ -12,13 +12,26 @@
   display: flex;
   align-items: center;
   gap: var(--secondary-gap);
+  border-radius: var(--secondary-radius);
   font-weight: bold;
-  transition: filter 250ms;
+  transition: filter 250ms, background-color 250ms;
 }
 
 .link[data-active="true"],
 .link:hover {
   filter: brightness(1.5);
+}
+
+.link:hover {
+  background-color: var(--secondary);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  min-width: 48px;
 }
 
 .main[data-minimized=true] {

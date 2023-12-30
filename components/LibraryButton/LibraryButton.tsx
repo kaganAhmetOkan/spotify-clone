@@ -29,12 +29,14 @@ export default function LibraryButton(
   return (
     <div className={style.main} data-minimized={minimized}>
       <button className={style.title} title={buttonTitle} onClick={toggleMinimized}>
-        <Image
-          src={libraryIcon}
-          alt="library"
-          width={iconSize}
-          height={iconSize}
-        />
+        <div className={style.icon}>
+          <Image
+            src={libraryIcon}
+            alt="library"
+            width={iconSize}
+            height={iconSize}
+          />
+        </div>
         <span>Library</span>
       </button>
       <button className={style.button} title="Create playlist or folder">

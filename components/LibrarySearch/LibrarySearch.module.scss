@@ -45,3 +45,7 @@
 .main[data-show-search=false] > input {
   max-width: 0;
 }
+
+.main[data-minimized=true] {
+  display: none;
+}

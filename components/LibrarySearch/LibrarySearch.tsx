@@ -6,23 +6,17 @@ import { useState } from "react";
 interface Params {
   readonly smallIconSize: number;
   readonly minimized: boolean;
-  readonly setMinimized: (value: boolean) => void;
 };
 
-export default function LibrarySearch({ smallIconSize, minimized, setMinimized }: Params) {
+export default function LibrarySearch({ smallIconSize, minimized }: Params) {
   const [showSearch, setShowSearch] = useState(false);
   
   function toggleShowSearch() {
-    if (showSearch && minimized) {
-      setMinimized(false);
-    } else {
-      setShowSearch(!showSearch);
-      setMinimized(false);
-    };
+    setShowSearch(!showSearch);
   };
 
   return (
-    <search className={style.main} data-show-search={showSearch && !minimized}>
+    <search className={style.main} data-show-search={showSearch} data-minimized={minimized}>
       <button onClick={toggleShowSearch}>
         <Image
           src="/icons/search.png"
@@ -34,7 +28,7 @@ export default function LibrarySearch({ smallIconSize, minimized, setMinimized }
       <input
         type="text"
         placeholder="Search in your library"
-        disabled={!showSearch || minimized}
+        disabled={!showSearch}
       ></input>
     </search>
   );

@@ -3,7 +3,6 @@
   flex-grow: 1;
   flex-direction: column;
   padding: var(--primary-padding);
-  gap: var(--secondary-gap);
   border-radius: var(--primary-radius);
   background-color: var(--bg-secondary);
   overflow: hidden;
@@ -12,5 +11,39 @@
 .filter {
   display: flex;
   flex-wrap: wrap;
+  padding: var(--primary-padding);
   gap: var(--primary-gap);
+}
+
+.tab {
+  display: flex;
+  padding: var(--primary-padding);
+  border-bottom: 1px solid var(--secondary);
+  margin-bottom: var(--primary-padding);
+}
+
+.tab > span:first-child {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 50%;
+  justify-content: flex-start;
+}
+
+.tab > span:last-child {
+  justify-content: flex-end;
+}
+
+.tab > span {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  color: var(--fg-secondary);
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.main[data-enlarged=false] {
+  .tab {
+    display: none;
+  }
 }

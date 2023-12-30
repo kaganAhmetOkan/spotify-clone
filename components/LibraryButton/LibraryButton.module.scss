@@ -1,5 +1,6 @@
 .main {
   display: flex;
+  align-items: center;
   gap: var(--primary-gap);
 }
 
@@ -26,10 +27,19 @@
   filter: brightness(1.5);
 }
 
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  min-width: 48px;
+}
+
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 24px; height: 24px;
   aspect-ratio: 1;
   border-radius: 50%;
   transition: background-color 250ms;
