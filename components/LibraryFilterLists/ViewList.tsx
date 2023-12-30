@@ -28,3 +28,5 @@ export default function ViewList({ list, view, setView, smallIconSize }: Params)
     </ul>
   );
 };
+
+// TODO: rework grid.png and import green versions of icons

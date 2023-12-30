@@ -1,9 +1,10 @@
 .main {
   display: flex;
+  flex-grow: 1;
   gap: var(--primary-gap);
   background-color: var(--secondary);
   border-radius: var(--secondary-radius);
-  transition: background-color 250ms;
+  transition: background-color 250ms, flex 250ms, gap 250ms;
 }
 
 .main > button,
@@ -16,6 +17,9 @@
 }
 
 .main > button {
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2rem; height: 2rem;
   cursor: pointer;
   padding: var(--secondary-padding);
   border-radius: 50%;
@@ -34,6 +38,8 @@
 
 .main[data-show-search=false] {
   background-color: transparent;
+  flex-grow: 0;
+  gap: 0;
 }
 
 .main[data-show-search=false] > input {

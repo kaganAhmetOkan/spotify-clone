@@ -24,15 +24,17 @@ export default function Library({ iconSize, minimized, setMinimized, enlarged, s
         setEnlarged={setEnlarged}
         smallIconSize={smallIconSize}
       />
-      <LibrarySearch
-        smallIconSize={smallIconSize}
-        minimized={minimized}
-        setMinimized={setMinimized}
-      />
-      <LibraryFilter
-        smallIconSize={smallIconSize}
-        minimized={minimized}
-      />
+      <div className={style.filter}>
+        <LibrarySearch
+          smallIconSize={smallIconSize}
+          minimized={minimized}
+          setMinimized={setMinimized}
+        />
+        <LibraryFilter
+          smallIconSize={smallIconSize}
+          minimized={minimized}
+        />
+      </div>
     </div>
   );
 };

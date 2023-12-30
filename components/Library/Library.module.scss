@@ -8,3 +8,9 @@
   background-color: var(--bg-secondary);
   overflow: hidden;
 }
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--primary-gap);
+}

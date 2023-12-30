@@ -11,7 +11,7 @@ export default function useBind(target: { current: null | HTMLElement}) {
     const height = target.current.clientHeight;
 
     setStyle({ top: `${top + height}px`, left: `${left}px` });
-  }, [target]);
+  }, [target, target.current?.offsetTop, target.current?.offsetLeft]);
 
   return style;
 };

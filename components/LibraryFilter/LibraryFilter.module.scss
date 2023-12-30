@@ -40,6 +40,8 @@
   background-color: var(--secondary);
   position: absolute;
   top: 32px;
+  transition: top 250ms, left 250ms;
+  z-index: 99;
 }
 
 .dropdown > ul {
@@ -85,7 +87,7 @@
 }
 
 .dropdown[data-active=false] {
-  display: none;
+  visibility: hidden;
 }
 
 .main[data-minimized=true] {
