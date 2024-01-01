@@ -1,5 +1,8 @@
+"use client";
 import style from "./LibraryFolder.module.scss";
 import Image from "next/image";
+import { useAtomValue } from "jotai";
+import { minimizedAtom, enlargedAtom, thumbnailSizeAtom } from "@/store";
 
 interface Params {
   readonly folder: {
@@ -11,14 +14,14 @@ interface Params {
     dateAdded: string;
     lastPlayed: string;
   };
-  readonly minimized: boolean;
-  readonly enlarged: boolean;
 };
 
 export default function LibraryFolder(
-  { folder: { title, thumbnail, type, songs, creator, dateAdded, lastPlayed }, minimized, enlarged }: Params
+  { folder: { title, thumbnail, type, songs, creator, dateAdded, lastPlayed } }: Params
 ) {
-  const thumbnailSize = 48;
+  const thumbnailSize = useAtomValue(thumbnailSizeAtom);
+  const minimized = useAtomValue(minimizedAtom);
+  const enlarged = useAtomValue(enlargedAtom);
   const subTitle = title === "Liked Songs" ? `${type} • ${songs} songs` : `${type} • ${creator}`;
 
   return (

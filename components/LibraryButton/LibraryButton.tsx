@@ -1,25 +1,19 @@
 "use client";
 import style from "./LibraryButton.module.scss";
 import Image from "next/image";
-import { useAtomValue } from "jotai";
-import { iconSizeAtom, smallIconSizeAtom } from "@/store";
+import { useAtomValue, useAtom } from "jotai";
+import { iconSizeAtom, smallIconSizeAtom, minimizedAtom, enlargedAtom } from "@/store";
 
-interface Params {
-  readonly minimized: boolean;
-  readonly setMinimized: (value: boolean) => void;
-  readonly enlarged: boolean;
-  readonly setEnlarged: (value: boolean) => void;
-};
+export default function LibraryButton() {
+  const [minimized, setMinimized] = useAtom(minimizedAtom);
+  const [enlarged, setEnlarged] = useAtom(enlargedAtom);
+  const iconSize = useAtomValue(iconSizeAtom);
+  const smallIconSize = useAtomValue(smallIconSizeAtom);
 
-export default function LibraryButton(
-  { minimized, setMinimized, enlarged, setEnlarged }: Params
-) {
   const libraryIcon = minimized ? "/icons/library.png" : "/icons/library_filled.png";
   const buttonTitle = minimized ? "Expand Your Library" : "Collapse Your Library";
   const enlargeIcon = enlarged ? "/icons/arrow_left.png" : "/icons/arrow_right.png";
   const enlargeTitle = enlarged ? "Show less" : "Show more";
-  const iconSize = useAtomValue(iconSizeAtom);
-  const smallIconSize = useAtomValue(smallIconSizeAtom);
 
   function toggleMinimized() {
     setMinimized(!minimized);
