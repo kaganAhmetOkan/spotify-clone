@@ -1,3 +1,36 @@
 .main {
   display: flex;
+  align-items: center;
+  gap: var(--secondary-gap);
+}
+
+.thumbnail {
+  border-radius: var(--secondary-radius);
+}
+
+.details {
+  h1 {
+    font-size: 1rem;
+  }
+
+  span {
+    color: var(--fg-secondary);
+    font-size: 0.8rem;
+  }
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: filter 250ms, transform 100ms;
+}
+
+.button:hover {
+  filter: brightness(1.5);
+}
+
+.button:active {
+  transform: scale(0.9);
 }
