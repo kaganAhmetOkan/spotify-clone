@@ -1,0 +1,55 @@
+.main {
+  display: flex;
+  align-items: center;
+  gap: var(--primary-gap);
+
+  input[type=range] {
+    width: 6rem;
+    background-color: transparent;
+  }
+  
+  input[type=range]::-moz-range-progress {
+    background-color: var(--fg);
+    transition: 100ms;
+    height: 0.3rem;
+    border-radius: 1rem;
+  }
+
+  input[type=range]::-moz-range-track {
+    background-color: var(--secondary);
+    height: 0.3rem;
+    border-radius: 1rem;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    width: 0.8rem; height: 0.8rem;
+    border-radius: 1rem;
+    border: none;
+    opacity: 0;
+    transition: 100ms;
+  }
+
+  input[type=range]:hover::-moz-range-thumb {
+    opacity: 1;
+  }
+
+  input[type=range]:hover::-moz-range-progress {
+    background-color: var(--primary);
+  }
+}
+
+.main > button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: filter 250ms, transform 100ms;
+}
+
+.main > button:hover {
+  filter: brightness(1.5);
+}
+
+.main > button:active {
+  transform: scale(0.9);
+}
