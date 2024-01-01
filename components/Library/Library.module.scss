@@ -56,7 +56,8 @@
   gap: var(--secondary-gap);
 }
 
-.main[data-enlarged=false] {
+.main[data-enlarged=false],
+.main[data-minimized=true] {
   .tab {
     display: none;
   }

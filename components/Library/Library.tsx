@@ -17,7 +17,7 @@ export default function Library({ iconSize, minimized, setMinimized, enlarged, s
   const smallIconSize = 16;
   
   return (
-    <div className={style.main} data-enlarged={enlarged}>
+    <div className={style.main} data-enlarged={enlarged} data-minimized={minimized}>
       <LibraryButton
         iconSize={iconSize}
         minimized={minimized}
