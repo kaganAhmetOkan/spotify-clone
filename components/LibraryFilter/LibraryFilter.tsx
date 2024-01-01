@@ -6,17 +6,19 @@ import ViewList from "../LibraryFilterLists/ViewList";
 import TypeList from "../LibraryFilterLists/TypeList";
 import { useState, useRef } from "react";
 import useBind from "@/hooks/useBind";
+import { useAtomValue } from "jotai";
+import { smallIconSizeAtom } from "@/store";
 
 interface Params {
-  readonly smallIconSize: number;
   readonly minimized: boolean;
 };
 
-export default function LibraryFilter({ smallIconSize, minimized }: Params) {
+export default function LibraryFilter({ minimized }: Params) {
   const [dropdown, setDropdown] = useState(false);
   const [sort, setSort] = useState("recents");
   const [view, setView] = useState("list");
   const [type, setType] = useState("");
+  const smallIconSize = useAtomValue(smallIconSizeAtom);
 
   const sortBy = ["recents", "recently added", "alphabetical", "creator"];
   const viewAs = ["compact", "list", "grid"];
@@ -45,7 +47,6 @@ export default function LibraryFilter({ smallIconSize, minimized }: Params) {
           list={viewAs}
           view={view}
           setView={setView}
-          smallIconSize={smallIconSize}
         />
         <TypeList
           list={typeAs}

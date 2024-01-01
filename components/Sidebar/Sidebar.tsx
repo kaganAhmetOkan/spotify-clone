@@ -8,13 +8,10 @@ export default function Sidebar() {
   const [minimized, setMinimized] = useState(false);
   const [enlarged, setEnlarged] = useState(false);
 
-  const iconSize = 24;
-
   return (
     <div className={style.main} data-enlarged={enlarged} data-minimized={minimized}>
-      <Nav iconSize={iconSize} minimized={minimized} />
+      <Nav minimized={minimized} />
       <Library
-        iconSize={iconSize}
         minimized={minimized}
         setMinimized={setMinimized}
         enlarged={enlarged}

@@ -3,16 +3,18 @@ import style from "./Nav.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useAtomValue } from "jotai";
+import { iconSizeAtom } from "@/store";
 
 interface Params {
-  readonly iconSize: number;
   readonly minimized: boolean;
 };
 
-export default function Nav({ iconSize, minimized }: Params) {
+export default function Nav({ minimized }: Params) {
   const path = usePathname();
   const atHome = path === "/home";
   const atSearch = path === "/search";
+  const iconSize = useAtomValue(iconSizeAtom);
 
   const homeIcon = atHome ? "/icons/home_filled.png" : "/icons/home.png";
   const searchIcon = atSearch ? "/icons/search_filled.png" : "/icons/search.png";

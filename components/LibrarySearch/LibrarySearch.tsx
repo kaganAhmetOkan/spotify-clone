@@ -2,15 +2,17 @@
 import style from "./LibrarySearch.module.scss";
 import Image from "next/image";
 import { useState } from "react";
+import { useAtomValue } from "jotai";
+import { smallIconSizeAtom } from "@/store";
 
 interface Params {
-  readonly smallIconSize: number;
   readonly minimized: boolean;
 };
 
-export default function LibrarySearch({ smallIconSize, minimized }: Params) {
+export default function LibrarySearch({ minimized }: Params) {
   const [showSearch, setShowSearch] = useState(false);
-  
+  const smallIconSize = useAtomValue(smallIconSizeAtom);
+
   function toggleShowSearch() {
     setShowSearch(!showSearch);
   };

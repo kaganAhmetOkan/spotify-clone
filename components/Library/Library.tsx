@@ -6,34 +6,27 @@ import LibraryFolder from "../LibraryFolder/LibraryFolder";
 import dummyFolders from "@/public/json/dummy_library_folders.json";
 
 interface Params {
-  readonly iconSize: number;
   readonly minimized: boolean;
   readonly setMinimized: (value: boolean) => void;
   readonly enlarged: boolean;
   readonly setEnlarged: (value: boolean) => void;
 };
 
-export default function Library({ iconSize, minimized, setMinimized, enlarged, setEnlarged }: Params) {
-  const smallIconSize = 16;
-  
+export default function Library({ minimized, setMinimized, enlarged, setEnlarged }: Params) {
   return (
     <div className={style.main} data-enlarged={enlarged} data-minimized={minimized}>
       <LibraryButton
-        iconSize={iconSize}
         minimized={minimized}
         setMinimized={setMinimized}
         enlarged={enlarged}
         setEnlarged={setEnlarged}
-        smallIconSize={smallIconSize}
       />
       <div className={style.scrollable}>
         <div className={style.filter}>
           <LibrarySearch
-            smallIconSize={smallIconSize}
             minimized={minimized}
           />
           <LibraryFilter
-            smallIconSize={smallIconSize}
             minimized={minimized}
           />
         </div>
