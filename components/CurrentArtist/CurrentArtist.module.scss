@@ -5,6 +5,7 @@
   gap: var(--primary-gap);
   border-radius: var(--primary-radius);
   background-color: var(--secondary);
+  overflow: hidden;
 
   h2 {
     font-size: 1rem;
@@ -24,9 +25,29 @@
   font-size: 0.9rem;
 }
 
-.main > div {
+.details {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: var(--primary-gap);
+}
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  padding: var(--primary-padding);
+  margin: calc(var(--primary-padding) * -1);
+  margin-bottom: 0;
+  position: relative;
+  width: calc(100% + var(--primary-padding) * 2);
+  aspect-ratio: 1.8;
+}
+
+.thumbnail > h2 {
+  z-index: 1;
+}
+
+.thumbnail > img {
+  object-fit: cover;
+  filter: brightness(0.8);
 }
