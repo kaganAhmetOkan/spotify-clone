@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  transition: filter 250ms, transform 250ms;
+  cursor: pointer;
+}
+
+.main:hover {
+  filter: brightness(1.5);
+}
+
+.main:active {
+  transform: scale(0.9);
+}
+
+.main[data-type=play] {
+  padding: var(--primary-padding);
+  border-radius: 10rem;
+  background-color: var(--fg);
+}
