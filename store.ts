@@ -16,10 +16,14 @@ interface CurrentTrack {
   readonly playlist?: string;
   readonly creators: string[];
   readonly thumbnail: string;
+  readonly duration: number;
+  progress: number;
 }
 
 export const currentTrackAtom = atom<CurrentTrack>({
   title: "Stand Off",
   creators: ["MEMBA", "Ehiorobo"],
   thumbnail: "/images/placeholder.png",
+  duration: 204,
+  progress: 0,
 });

@@ -3,6 +3,7 @@ import ToggleShuffle from "../PrimaryControlButtons/ToggleShuffle";
 import SkipButton from "../PrimaryControlButtons/SkipButton";
 import TogglePlay from "../PrimaryControlButtons/TogglePlay";
 import ToggleRepeat from "../PrimaryControlButtons/ToggleRepeat";
+import Slider from "../Slider/Slider";
 
 export default function PrimaryControls() {
   return (
@@ -14,6 +15,7 @@ export default function PrimaryControls() {
         <SkipButton type="end" />
         <ToggleRepeat />
       </div>
+      <Slider />
     </div>
   );
 };

@@ -22,7 +22,7 @@ export default function Home() {
       - [x] Next
     - [x] Controller:
       - [x] CurrentSong
-      - [ ] Controls
+      - [x] Controls
       - [x] Options
   
   ---
