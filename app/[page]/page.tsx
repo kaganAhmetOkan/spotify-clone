@@ -17,13 +17,13 @@ export default function Home() {
       - [ ] Searchbar
       - [ ] Sections
     - [x] About:
-      - [ ] Thumbnail
-      - [ ] Artist
-      - [ ] Next
+      - [x] Thumbnail
+      - [x] Artist
+      - [x] Next
     - [x] Controller:
-      - [ ] CurrentSong
+      - [x] CurrentSong
       - [ ] Controls
-      - [ ] Options
+      - [x] Options
   
   ---
 
