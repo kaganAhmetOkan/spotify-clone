@@ -59,5 +59,3 @@ export default function Hero() {
     </div>
   );
 };
-
-// TODO: data-colors need specific colors

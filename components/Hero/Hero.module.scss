@@ -14,7 +14,7 @@
   flex-direction: column;
   padding: calc(var(--primary-padding) * 2);
   gap: var(--primary-gap);
-  background: linear-gradient(0deg, var(--bg-secondary), transparent);
+  background: linear-gradient(0deg, var(--bg-secondary), rgba(0,0,0,0.5));
 }
 
 .folders {
@@ -25,17 +25,17 @@
 }
 
 .main[data-color=purple] {
-  background-color: purple;
+  background-color: var(--purple);
 }
 
 .main[data-color=pink] {
-  background-color: pink;
+  background-color: var(--pink);
 }
 
 .main[data-color=yellow] {
-  background-color: yellow;
+  background-color: var(--yellow);
 }
 
 .main[data-color=red] {
-  background-color: red;
+  background-color: var(--red);
 }
