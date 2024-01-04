@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: var(--primary-padding);
+  gap: var(--primary-gap);
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  span {
+    color: var(--fg-secondary);
+    font-size: 0.8rem;
+  }
+}
+
+.main > img {
+  border-radius: var(--primary-radius);
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
