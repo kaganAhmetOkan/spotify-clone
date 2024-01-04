@@ -1,0 +1,38 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: var(--primary-padding);
+  gap: var(--primary-gap);
+  border-radius: var(--primary-radius);
+  background-color: var(--secondary);
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  span {
+    color: var(--fg-secondary);
+    font-size: 0.8rem;
+  }
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  border-radius: var(--primary-radius);
+  gap: var(--primary-gap);
+  padding: var(--primary-padding);
+  cursor: pointer;
+}
+
+.details:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.details > img {
+  border-radius: var(--secondary-radius);
+}
