@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  padding: var(--primary-padding);
+  border-radius: 10rem;
+  color: var(--fg-secondary);
+  border: 1px solid var(--fg-secondary);
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: filter 250ms;
+}
+
+.main:hover {
+  filter: brightness(1.5);
+}

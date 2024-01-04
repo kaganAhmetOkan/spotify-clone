@@ -9,6 +9,7 @@ export const minimizedAtom = atom(false);
 export const enlargedAtom = atom(false);
 export const aboutAtom = atom(true);
 export const likedAtom = atom(false);
+export const followingAtom = atom(false);
 
 interface CurrentTrack {
   readonly title: string;
