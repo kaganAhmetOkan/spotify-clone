@@ -30,6 +30,8 @@
 
   --browser-height: calc(100svh - var(--primary-padding) * 2 - var(--controller-height) - var(--primary-gap));
 
+  --header-height: 2rem;
+
   color-scheme: dark;
 }
 

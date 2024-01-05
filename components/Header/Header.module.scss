@@ -1,0 +1,43 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: var(--header-height);
+  margin-bottom: calc(var(--header-height) * -1 - var(--primary-padding));
+  gap: var(--primary-gap);
+  padding: var(--primary-padding);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: var(--primary-gap);
+}
+
+.navigation > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--secondary-padding);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 10rem;
+  outline: none;
+  cursor: pointer;
+  transition: filter 250ms, scale 100ms;
+}
+
+.navigation > button:hover {
+  filter: brightness(1.5);
+}
+
+.navigation > button:active {
+  scale: 0.9;
+}
+
+.navigation > button:disabled {
+  filter: grayscale(100%);
+}
