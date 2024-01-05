@@ -6,4 +6,6 @@
   gap: var(--primary-gap);
   border-radius: var(--primary-radius);
   background-color: var(--bg-secondary);
+  overflow-y: auto;
+  height: var(--browser-height);
 }

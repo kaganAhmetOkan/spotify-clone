@@ -28,6 +28,8 @@
   
   --controller-height: 6rem;
 
+  --browser-height: calc(100svh - var(--primary-padding) * 2 - var(--controller-height) - var(--primary-gap));
+
   color-scheme: dark;
 }
 
