@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--primary-padding);
+  padding: var(--primary-padding);
+}
+
+.main > h1 {
+  font-size: 2rem;
+}
+
+.folders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--secondary-gap);
+}

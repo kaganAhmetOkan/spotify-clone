@@ -46,7 +46,7 @@ export default function Hero() {
       thumbnail: "/images/placeholder.png",
       color: "purple"
     },
-  ]
+  ];
 
   return (
     <div className={style.main} data-color={color}>

@@ -1,0 +1,31 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  aspect-ratio: 0.65;
+  width: 9rem;
+  padding: var(--primary-padding);
+  background-color: var(--secondary);
+  border-radius: var(--primary-radius);
+  gap: var(--primary-gap);
+  cursor: pointer;
+}
+
+.main > h1 {
+  font-size: 1.2rem;
+}
+
+.main > span {
+  color: var(--fg-secondary);
+  font-size: 0.8rem;
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.thumbnail > img {
+  border-radius: var(--secondary-radius);
+}
