@@ -1,6 +1,7 @@
 "use client";
 import style from "./Header.module.scss";
 import Image from "next/image";
+import SearchBar from "../SearchBar/SearchBar";
 import { useAtomValue } from "jotai";
 import { smallIconSizeAtom } from "@/store";
 
@@ -29,6 +30,7 @@ export default function Header() {
           />
         </button>
       </div>
+      <SearchBar />
       <div className={style.navigation}>
         <button>
           <Image
@@ -58,3 +60,5 @@ export default function Header() {
     </header>
   );
 };
+
+// TODO: overflow auto for About component

@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+}
+
+.main > input {
+  display: flex;
+  font-size: 0.8rem;
+  color: var(--fg-secondary);
+  border: 1px solid transparent;
+  outline: 1px solid transparent;
+  background-color: var(--secondary);
+  border-radius: 10rem;
+  padding: 0.6rem 1rem;
+  width: 20rem;
+  transition: border 200ms, outline 200ms;
+}
+
+.main > input:hover {
+  border: 1px solid var(--fg-secondary);
+}
+
+.main > input:focus-visible {
+  border: 1px solid var(--fg);
+  outline: 1px solid var(--fg);
+}
+
+.main[data-visible=false] {
+  display: none;
+}
