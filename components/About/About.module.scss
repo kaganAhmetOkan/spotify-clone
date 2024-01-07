@@ -1,11 +1,18 @@
 .main {
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
   border-radius: var(--primary-radius);
   padding: var(--primary-padding);
   gap: var(--primary-gap);
   background-color: var(--bg-secondary);
   width: var(--sidebar-width);
+  height: 20vh;
 }
 
 .main[data-visible=false] {

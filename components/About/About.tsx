@@ -11,9 +11,11 @@ export default function About() {
   
   return (
     <div className={style.main} data-visible={about}>
-      <CurrentTrack />
-      <CurrentArtist />
-      <NextTrack />
+      <div className={style.container}>
+        <CurrentTrack />
+        <CurrentArtist />
+        <NextTrack />
+      </div>
     </div>
   );
 };
