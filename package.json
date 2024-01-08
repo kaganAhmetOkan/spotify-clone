@@ -1,6 +1,6 @@
 {
   "name": "spotify-clone",
-  "version": "2.3.7",
+  "version": "2.3.8",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,6 +11,7 @@
   "dependencies": {
     "jotai": "^2.6.1",
     "next": "14.0.4",
+    "rc-slider": "^10.5.0",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.69.5"
