@@ -2,40 +2,6 @@
   display: flex;
   align-items: center;
   gap: var(--primary-gap);
-
-  input[type=range] {
-    width: 6rem;
-    background-color: transparent;
-  }
-  
-  input[type=range]::-moz-range-progress {
-    background-color: var(--fg);
-    transition: 100ms;
-    height: 0.3rem;
-    border-radius: 1rem;
-  }
-
-  input[type=range]::-moz-range-track {
-    background-color: var(--secondary);
-    height: 0.3rem;
-    border-radius: 1rem;
-  }
-
-  input[type=range]::-moz-range-thumb {
-    width: 0.8rem; height: 0.8rem;
-    border-radius: 1rem;
-    border: none;
-    opacity: 0;
-    transition: 100ms;
-  }
-
-  input[type=range]:hover::-moz-range-thumb {
-    opacity: 1;
-  }
-
-  input[type=range]:hover::-moz-range-progress {
-    background-color: var(--primary);
-  }
 }
 
 .main > button {
@@ -52,4 +18,45 @@
 
 .main > button:active {
   transform: scale(0.9);
+}
+
+.input {
+  width: 6rem;
+}
+
+.rail {
+  background-color: var(--secondary);
+  height: 0.3rem;
+  border-radius: 1rem;
+}
+
+.handle {
+  background-color: var(--fg);
+  opacity: 0;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  width: 0.8rem; height: 0.8rem;
+  cursor: default;
+  transition: opacity 100ms;
+}
+
+.handle:active {
+  cursor: default;
+}
+
+.track {
+  background-color: var(--fg);
+  height: 0.3rem;
+  transition: background-color 100ms;
+}
+
+.input:hover .handle,
+.input:active .handle {
+  opacity: 1;
+}
+
+.input:hover .track,
+.input:active .track {
+  background-color: var(--primary);
 }

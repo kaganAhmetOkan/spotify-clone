@@ -1,5 +1,7 @@
 "use client";
 import style from "./VolumeControls.module.scss";
+import CustomSlider from "rc-slider";
+import "rc-slider/assets/index.css";
 import Image from "next/image";
 import { useState } from "react";
 import { useAtomValue } from "jotai";
@@ -21,9 +23,10 @@ export default function VolumeControls() {
     setMuted(!muted);
   };
 
-  function updateVolume(event: React.ChangeEvent<HTMLInputElement>) {
+  function updateVolume(value: number | number[]) {
+    if (typeof value !== "number") return;
     if (muted) setMuted(false);
-    setVolume(+event.currentTarget.value);
+    setVolume(value);
   };
 
   return (
@@ -36,15 +39,14 @@ export default function VolumeControls() {
           height={mediumIconSize}
         />
       </button>
-      <input
-        type="range"
+      <CustomSlider
+        className={style.input}
+        classNames={{ track: style.track, handle: style.handle, rail: style.rail }}
         min={0}
         max={100}
-        className={style.slider}
-        title={volume.toString()}
-        value={muted ? "0" : volume}
+        value={muted ? 0 : volume}
         onChange={updateVolume}
-      ></input>
+      />
     </div>
   );
 };
